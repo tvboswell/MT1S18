@@ -85,7 +85,7 @@ int p2test_2()
 float p2::GetResistance()
 {
 
-	std::cout << "\r\nPlease enter 3 numbers to find the equavalent resistance deviations for: ";
+	std::cout << "\r\nPlease enter 3 numbers to find the equavalent resistance for: ";
 
 	float N1;
 
