@@ -3,8 +3,8 @@ class p1
 {
 public:
 	p1();
-	int test();
-	float GetstandardDeviation();
+	//int test1();
+	float GetStandardDeviation();
 	~p1();
 };
 

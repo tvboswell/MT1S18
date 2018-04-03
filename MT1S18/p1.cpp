@@ -20,25 +20,25 @@
 
 
 int test_1();
-int test_2();
+
 float standardDeviation(float N1, float N2, float N3);
-float resistance(float N1, float N2, float N3);
+
 float avgerage(float N1, float N2, float N3);
 
 p1::p1()
 {
 	
 }
+//
+//int p1::test1()
+//{
+//	//Test resistance
+//	test_1();
+//	//test_2();
+//	return 0;
+//}
 
-int p1::test()
-{
-	//Test resistance
-	test_1();
-	test_2();
-	return 0;
-}
-
-float p1::GetstandardDeviation()
+float p1::GetStandardDeviation()
 {
 
 	std::cout << "\r\nPlease enter 3 numbers to find the standard deviations for: ";
@@ -58,7 +58,7 @@ float p1::GetstandardDeviation()
 			std::cin.clear(); // reset failbit
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //skip bad input
 																		   // next, request user reinput
-			std::cout << "\r\n Error, expecting a number like 7 or 2.3";
+			std::cout << "\r\n Error, expecting a number like 7 or 2.3 or 420.77";
 			num1BAD = true;
 		}
 		else
@@ -79,36 +79,17 @@ float p1::GetstandardDeviation()
 	float strdDev = standardDeviation(N1, N2, N3);
 	//printf_s("standard dev debug %11.6lf", strdDev);
 
-	printf_s("The standard deviation of 3 numbers N1(%f), N2(%f), N3(%f) is ST(Show computed value)", N1, N2, N3, strdDev);
+	printf_s("The standard deviation of 3 numbers N1(%f), N2(%f), N3(%f) is SD(%f)\r\n ", N1, N2, N3, strdDev);
 
 	return strdDev;
 }
 
+
+
+
+
+
 int test_1()
-{
-	int returnVal = 0;
-	//https://www.electronics-tutorials.ws/resistor/res_4.html
-	// 200.0, 470.0, 220.0 in parallel, Ans 85.66
-	float x = resistance(200.0, 470.0, 220.0);
-	if (x - 85.66 < .1)
-	{
-		std::cout << "Test 1 Correct.\r\n";
-		returnVal = 0;
-	}
-	else
-	if (x - 85.66 < .1)
-	{
-		std::cout << "Test 1 Incorrect\r\n";
-		returnVal = 1;
-	}
-	std::cout << "x =  " << x;
-	printf("%11.6lf", x);
-
-	return returnVal;
-}
-
-
-int test_2()
 {
 	int returnVal = 0;
 	//http://www.calculator.net/standard-deviation-calculator.html
@@ -136,17 +117,13 @@ int test_2()
 		returnVal = 0;
 	}
 	else
-		if (x - 85.66 < .1)
-		{
-			std::cout << "Test 2 Incorrect\r\n";
-			returnVal = 1;
-		}
-	std::cout << "x =  " << x;
-	printf("%11.6lf", x);
-
+	{
+		std::cout << "Test 2 Incorrect\r\n";
+		returnVal = 1;
+	}
+	
 	return returnVal;
 }
-
 
 float standardDeviation(float N1, float N2, float N3)
 {
@@ -173,13 +150,6 @@ float avgerage(float N1, float N2, float N3)
 
 
 
-float resistance(float N1, float N2, float N3)
-{
-	float eq = 1/(1/ N1 + 1/N2 + 1/N3);
-
-
-	return eq;
-}
 
 p1::~p1()
 {
