@@ -1,5 +1,12 @@
 #include "stdafx.h"
 #include "p5.h"
+#include <cmath>
+#include <stdio.h>
+#include <iostream>
+#include <cmath>
+
+long Fact(long);
+long dustins_factorial(long);
 //
 //5 - Write a C program to do the following : a - read in an input integer 
 //from user and compute the factorial of the input Fact(n) = n * (n - 1)*(n - 2)*... * 3 * 2 * 1 Test 
@@ -24,6 +31,84 @@
 
 p5::p5()
 {
+}
+
+int p5::FactorialTests(int T)
+{
+
+	long in = 3;
+	long out = 6;
+	out = Fact(in);
+	printf_s("%ld %ld | ", in, out);
+
+	//std::cout << "%I %I | ", 3, dustins_factorial(3);
+	
+	in = 2;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+	
+	in = 4;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+	
+	in = 8;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 5;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 10;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 8;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 5;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 2;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+	
+	in = 1;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 1;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 2;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 10;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 4;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	in = 6;
+	printf_s("%ld %ld | ", in, dustins_factorial(in));
+
+	return 0;
+}
+
+
+void p5test1()
+{
+	long testval = 3;
+	long fact = dustins_factorial(testval);
+
+}
+
+
+long dustins_factorial(long f)
+{
+	if (f == 0)
+		return 1;
+	return(f * dustins_factorial(f - 1));
+}
+
+long Fact(long x)
+{
+	if (x == 1)
+		return 1;
+	return (x * Fact(x - 1));
 }
 
 
