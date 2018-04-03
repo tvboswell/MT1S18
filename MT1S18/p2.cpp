@@ -16,72 +16,71 @@
 //
 //
 
-// int test_1();
-//int test_2();
+
+int p2test_1();
+int p2test_2();
 float resistance(float N1, float N2, float N3);
 
 p2::p2()
 {
 }
 
-//int p2::test2()
-//{
+int p2::test2()
+{
 //	//Test resistance
-//	test_1();
-//	test_2();
-//	return 0;
-//}
+	p2test_1();
+	p2test_2();
+	return 0;
+}
 
-//
-//int test_1()
-//{
-//	int returnVal = 0;
-//	//https://www.electronics-tutorials.ws/resistor/res_4.html
-//	// 200.0, 470.0, 220.0 in parallel, Ans 85.66
-//	
-//	double y = resistance(200.0, 470.0, 220.0);
-//
-//	float x = trunc(y);
-//
-//	if (x - 85.66 < .1)
-//	{
-//		std::cout << "Test 1 Correct.\r\n";
-//		returnVal = 0;
-//	}
-//	else
-//	{
-//		std::cout << "Test 1 Incorrect\r\n";
-//		returnVal = 1;
-//	}
-//
-//
-//	return returnVal;
-//}
-//
-//int test_2()
-//{
-//	int returnVal = 0;
-//	//From Assignment
-//
-//	//If user enter 5.2, 3.6, 10.9, output is The equivalent resistor of 3 parallel resistors 5.2, 3.6, 10.9 is 1.779
-//
-//	float x = resistance(5.2, 3.6, 10.9);
-//
-//	
-//	if (x - 1.779 < .1)
-//	{
-//		std::cout << "Test 3 Correct.\r\n";
-//		returnVal = 0;
-//	}
-//	else
-//	{
-//		std::cout << "Test 3 Incorrect\r\n";
-//		returnVal = 1;
-//	}
-//
-//	return returnVal;
-//}
+int p2test_1()
+{
+	int returnVal = 0;
+	//https://www.electronics-tutorials.ws/resistor/res_4.html
+	// 200.0, 470.0, 220.0 in parallel, Ans 85.66
+	
+	float y = resistance(200.0, 470.0, 220.0);
 
+	//float x = trunc(y);
+
+	if (y - 85.66 < .1)
+	{
+		std::cout << "Problem 2 Test 1 correct\r\n";
+		returnVal = 0;
+	}
+	else
+	{
+		std::cout << "Problem 2 Test 1 incorrect\r\n";
+		returnVal = 1;
+	}
+
+
+	return returnVal;
+}
+
+int p2test_2()
+{
+	int returnVal = 0;
+	//From Assignment
+
+	//If user enter 5.2, 3.6, 10.9, output is The equivalent resistor of 3 parallel resistors 5.2, 3.6, 10.9 is 1.779
+
+	float x = resistance(5.2, 3.6, 10.9);
+
+	
+	if (x - 1.779 < .1)
+	{
+		std::cout << "Problem 2 Test 2 Correct.\r\n";
+		returnVal = 0;
+	}
+	else
+	{
+		std::cout << "Problem 2 Test 2 Incorrect\r\n";
+		returnVal = 1;
+	}
+
+	return returnVal;
+}
 
 float p2::GetResistance()
 {
@@ -128,7 +127,6 @@ float p2::GetResistance()
 
 	return res;
 }
-
 
 float resistance(float N1, float N2, float N3)
 {

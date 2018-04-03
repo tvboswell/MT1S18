@@ -29,14 +29,14 @@ p1::p1()
 {
 	
 }
-//
-//int p1::test1()
-//{
-//	//Test resistance
-//	test_1();
-//	//test_2();
-//	return 0;
-//}
+
+int p1::test1()
+{
+	////Test resistance
+	test_1();
+	//test_2();
+	return 0;
+}
 
 float p1::GetStandardDeviation()
 {
@@ -84,11 +84,6 @@ float p1::GetStandardDeviation()
 	return strdDev;
 }
 
-
-
-
-
-
 int test_1()
 {
 	int returnVal = 0;
@@ -113,12 +108,12 @@ int test_1()
 		86.858761471969*/
 	if (x - 122.83 < .1)
 	{
-		std::cout << "Test 2 Correct.\r\n";
+		std::cout << "\r\nProblem 1 Test 1 Correct.\r\n";
 		returnVal = 0;
 	}
 	else
 	{
-		std::cout << "Test 2 Incorrect\r\n";
+		std::cout << "\r\nProblem 1 Test 2 Incorrect\r\n";
 		returnVal = 1;
 	}
 	
@@ -145,11 +140,6 @@ float avgerage(float N1, float N2, float N3)
 
 	return eq;
 }
-
-
-
-
-
 
 p1::~p1()
 {
